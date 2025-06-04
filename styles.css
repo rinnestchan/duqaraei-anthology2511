@@ -1,0 +1,262 @@
+/* フォント読み込み */
+@font-face {
+  font-family: 'SoukouMincho';
+  src: url('https://cdn.glitch.global/e1ffb988-b30b-4485-a5ae-721a148ca615/SoukouMincho.ttf?v=1748260135461') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSerifJP';
+  src: url('https://cdn.glitch.global/e1ffb988-b30b-4485-a5ae-721a148ca615/NotoSerifJP-VariableFont_wght.ttf?v=1748260658890') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* bodyにまとめて設定 */
+body {
+  font-family: 'NotoSerifJP', serif;
+  background-color: transparent;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* h2 タグだけ SoukouMincho に */
+h2 {
+  font-family: 'SoukouMincho', serif;
+}
+
+
+body {
+  background-color: transparent;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+.hero-image {
+  width: 75%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .hero-image.full-width-on-mobile {
+    width: 100% !important;
+  }
+}
+
+.about2 {
+  font-size: 80%;
+}
+
+.about,
+.member,
+.Announcement-information,
+.contact {
+  background-color: #eeeeee;
+  padding: 20px;
+  margin: 10px;
+}
+.contact form {
+  max-width: 80%;   /* フォームの最大幅 */
+  margin: 0 auto;     /* 中央に寄せる */
+}
+
+.info-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.info-table th,
+.info-table td {
+  padding: 15px;
+  text-align: left;
+  white-space: normal;
+}
+
+@media (max-width: 1080px) {
+  .info-table th,
+  .info-table td {
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .info-table th {
+    background-color: #f5f5f5;
+    border-bottom: none;
+  }
+}
+
+.subheading {
+  font-size: 100%;
+}
+
+.normal-text {
+  font-size: 100%;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+/* メンバーテーブルのスタイル */
+.member-table table {
+  width: 100%;
+  border-collapse: separate;
+
+  
+  background: linear-gradient(to right, #dc050e, black); /* ← ここを修正 */
+}
+
+
+table.color {
+  background: linear-gradient(to right, #dc050e, black);
+  color: white;
+  margin: 30px auto;        /* テーブルを中央に配置し、上下に隙間を作る */
+  width: 100%;               /* 幅を狭く（必要なら80%や600pxなどに調整可） */
+  max-width: 600px;         /* 画面が広くても最大600pxに制限 */
+  border-collapse: separate;
+  border-spacing: 0;      /* 角丸をつけると見た目がやさしくなる */
+  overflow: hidden;
+}
+
+
+
+/* nameセルのスタイル */
+.member-table th.name {
+  position: relative;
+
+  width: 50%; /* 変更：全体の半分のスペース */
+  padding: 20px;
+  white-space: nowrap;
+
+  border-radius: 5px;
+}
+
+/* グラデーションテキストのスタイル */
+.member-table th.name span {
+  color: white;
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+}
+
+.member-table .icon {
+  width: calc(50% / 3); /* 変更：残り半分を3等分 */
+  padding: 10px;
+  text-align: center;
+}
+
+.member-table img {
+  width: 30px;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* スマートフォン向けメンバーテーブルの調整 */
+@media (max-width: 768px) {
+  .member-table {
+    width: 95%;
+  }
+
+  .member-table th.name {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .member-table .icon {
+    padding: 5px;
+  }
+
+  .member-table img {
+    width: 25px;
+    height: auto;
+  }
+
+  /* 横並びを維持 */
+  .member-table th,
+  .member-table td {
+    display: table-cell;
+  }
+
+  .member-table tr {
+    display: table-row;
+  }
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.required {
+  color: #dc050e;
+  margin-left: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  background: linear-gradient(to right, #dc050e, black);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    padding: 12px 20px;
+  }
+}
